@@ -37,6 +37,13 @@ if (typeof process === 'object' && process !== null &&
     return (end[0] * 1e9 + end[1]) / 1e6;
   };
   
+} else if (typeof performance === 'object' && performance !== null &&
+            typeof performance.now === 'function') {
+  // High-resolution time for browsers.
+  initTimer = () => performance.now();
+  getTimer = (start) => {
+    return performance.now() - start;
+  };
 }
 
 export {initTimer, getTimer};
