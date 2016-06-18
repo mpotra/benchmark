@@ -1,5 +1,5 @@
 {
-  "name": "benchmark",
+  "name": "benchmark-hr",
   "version": "0.1.0",
   "description": "Benchmarking Tool for JavaScript",
   "main": "index.js",
@@ -8,14 +8,14 @@
     "jslint": "eslint src",
     "jslint:test": "eslint test",
     "jslint:benchmark": "eslint benchmark",
-    "build": "npm run clean && babel -d lib src/",
+    "build": "npm run clean && babel --out-file lib/benchmark.js src/",
     "benchmark": "node babel-runner benchmark/run_benchmarks.js",
     "test": "node node_modules/.bin/babel-tape-runner test/run_tests.js | node_modules/.bin/tap-spec",
     "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mpotra/benchmark.git"
+    "url": "git+https://github.com/mpotra/benchmark-hr.git"
   },
   "keywords": [
     "benchmark",
@@ -29,9 +29,9 @@
   "author": "Mihai Potra <mike@mpotra.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mpotra/benchmark/issues"
+    "url": "https://github.com/mpotra/benchmark-hr/issues"
   },
-  "homepage": "https://github.com/mpotra/benchmark#readme",
+  "homepage": "https://github.com/mpotra/benchmark-hr#readme",
   "engines": {
     "node": ">=6.0.0"
   },
